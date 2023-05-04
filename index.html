@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador/Desencriptador</title>
+    <link rel="stylesheet" href="./src/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./src/css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+    </style>
+</head>
+<body>
+    <header class="logo">
+        <h1><img id="alura" src="./src/assets/Logo.png" alt="Logo de Alura"></h1>
+    </header>
+    <main class="container">
+		<div class="input-area">
+			<textarea id="texto" name="texto" rows="7" cols="35" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="alerta">
+                <img id="icon" src="./src/assets/Vector.png" alt="alert">
+                <label for="icon">Solo letras minúsculas y sin acentos</label>
+            </div>
+			<div class="buttons">
+				<button id="encriptar">Encriptar</button>
+				<button id="desencriptar">Desencriptar</button>
+			</div>
+		</div>
+		<div class="resultado-area">
+            <div class="sin-resultado">
+                <img id="muneco" src="./src/assets/Muñeco.png" alt="Muñeco">
+                <p id="mensaje">Ningún mensaje fue encontrado</p>
+                <p id="ingresar-texto">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <textarea id="resultado" name="resultado" rows="5" readonly></textarea>
+            <button id="copiar">Copiar</button>
+		</div>
+	</main>
+    <footer>
+        <p>Autor: Bryan Cordero</p>
+    </footer>
+	<script src="./src/js/script.js"></script>
+</body>
+</html>

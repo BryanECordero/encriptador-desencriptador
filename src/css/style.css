@@ -1,0 +1,220 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	background-color: #E5E5E5;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.logo {
+	padding: 40px 0 0 20px;
+}
+
+.container {
+	width: 85%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.input-area {
+	width: 60%;
+	min-width: 660px;
+	margin-top: 170px;
+	margin-bottom: 20px;
+	padding-bottom: 15px;
+}
+
+textarea {
+	width: 100%;
+	padding: 0 30px 0 30px;
+	font-size: 30px;
+	border: none;
+	color: #0A3871;
+	background: none;
+	resize: none;
+	outline: none;
+}
+
+textarea::placeholder{
+	opacity: 1;
+	color: #0A3871;
+}
+
+.alerta {
+	display: flex;
+	align-items: center;
+	margin: 10px 0 8px 0;
+
+}
+label {
+	font-size: 14px;
+	color: #495057;
+	opacity: .8;
+}
+
+#icon {
+	width: 12px;
+	height: 12px;
+	margin-right: 5px;
+}
+
+.buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+button {
+	min-width: 280px;
+	background-color: #D8DFE8;
+	color: #0A3871;
+	border-color: #0A3871;
+	border-radius: 20px;
+	padding: 18px 0 18px 0;
+	margin: 8px 0 0 0;
+	font-size: 16px;
+	cursor: pointer;
+	width: 40%;
+	transition: box-shadow .3s, translate .3s;
+}
+
+button:hover {
+	box-shadow: 0 3px 0 black;
+	translate: 0 -3px;
+}
+
+button:active {
+	box-shadow: none;
+	translate: 0;
+}
+
+.resultado-area {
+	background: #FFFFFF;
+	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+	border-radius: 28px;
+	width: 320px;
+	min-width: 320px;
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+
+
+.sin-resultado{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+#encriptar {
+	background: #0A3871;
+	color: #FFFFFF;
+}
+
+#resultado {
+	padding: 10px;
+	color: #495057;
+	font-size: 18px;
+	flex-grow: 1;
+	display: none;
+}
+
+#copiar {
+	display: none;
+	width: 100%;
+	flex: 0;
+}
+
+#mensaje {
+	margin: 0;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 120%;
+	color: #343A40;
+	text-align: center;
+	padding: 0;
+}
+
+#ingresar-texto {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	color: #495057;
+	flex: none;
+	text-align: center;
+	margin: 0;
+	padding: 20px;
+}
+
+#muneco {
+	width: 90%;
+	height: auto;
+}
+
+footer{
+	width: 100%;
+}
+
+footer p{
+	color: #343A40;
+	padding-left: 10px;
+}
+
+@media only screen and (max-width: 1210px) {
+	.container {
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.input-area {
+		margin-top: 80px;
+		padding-bottom: 15px;
+	}
+
+	.resultado-area {
+		width: 55%;
+		min-width: 620px;
+	}
+
+	#muneco {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.logo {
+		padding: 20px 0 0 0;
+	}
+
+	.logo img {
+		translate: -20px 0;
+	}
+
+	.input-area, .resultado-area {
+		width: 90%;
+		min-width: 0;
+	}
+	.buttons {
+		flex-direction: column;
+	}
+
+	button {
+		width: 100%;
+	}
+}
