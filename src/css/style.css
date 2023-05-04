@@ -168,11 +168,34 @@ button:active {
 
 footer{
 	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.social-icon{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.social-icon__link {
+	font-size: 2rem;
+	color: #0A3871;
+	margin: 0 10px;
+	display: inline-block;
+	transition: 0.5s;
+}
+.social-icon__link:hover {
+	transform: translateY(-10px);	
 }
 
 footer p{
 	color: #343A40;
-	padding-left: 10px;
+	margin: 10px 0 10px 0;
 }
 
 @media only screen and (max-width: 1210px) {
