@@ -84,12 +84,6 @@ button {
 	transition: transform .3s;
 }
 
-@media (hover: hover) {
-	button:hover {
-		transform: scale(1.05);
-	}
-}
-
 button:active {
 	transform: scale(0.95);
 }
@@ -189,13 +183,20 @@ footer{
 	display: inline-block;
 	transition: 0.5s;
 }
-.social-icon__link:hover {
-	transform: translateY(-10px);	
-}
 
 footer p{
 	color: #343A40;
 	margin: 10px 0 10px 0;
+}
+
+@media (hover: hover) {
+	button:hover {
+		transform: scale(1.05);
+	}
+
+	.social-icon__link:hover {
+		transform: translateY(-10px);	
+	}
 }
 
 @media only screen and (max-width: 1210px) {
