@@ -14,6 +14,18 @@ const desencriptar = (texto) => {
 				.replace(/ufat/g, 'u');
 };
 
+function contieneMayusculas (tx) {
+	return /[A-ZÑ]/.test(tx);
+};
+
+function contieneAcentos (tx) {
+	return /[áéíóúÁÉÍÓÚ]/.test(tx);
+};
+
+function checarTexto(tx) {
+	return tx.length === 0 || contieneAcentos(tx) || contieneMayusculas(tx);
+};
+
 function mostrarResultado () {
 	document.querySelector('.sin-resultado').style.display = 'none';
 	document.querySelector('#resultado').style.display = 'block'
@@ -23,16 +35,31 @@ function mostrarResultado () {
 const botonEncriptar = document.querySelector('#encriptar');
 const botonDesencriptar = document.querySelector('#desencriptar');
 const copiar = document.querySelector('#copiar');
+const areaTexto = document.querySelector('#texto');
+
+areaTexto.addEventListener('input', () => {
+	if (checarTexto(areaTexto.value)){
+		document.querySelector('.alerta label').style.color = 'red';
+		botonEncriptar.disabled = true;
+		botonDesencriptar.disabled = true;
+		
+	}
+	else {
+		document.querySelector('.alerta label').style.color = '#495057';
+		botonEncriptar.disabled = false;
+		botonDesencriptar.disabled = false;
+	}
+})
 
 botonEncriptar.addEventListener('click', () => {
-	const texto = document.querySelector('#texto').value;
+	const texto = areaTexto.value;
 	const resultado = encriptar(texto);
 	document.querySelector('#resultado').value = resultado;
 	mostrarResultado();
 });
 
 botonDesencriptar.addEventListener('click', () => {
-	const texto = document.querySelector('#texto').value;
+	const texto = areaTexto.value;
 	const resultado = desencriptar(texto);
 	document.querySelector('#resultado').value = resultado;
 	mostrarResultado();
